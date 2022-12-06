@@ -1,0 +1,71 @@
+# depslib dependency file v1.0
+1667309422 source:c:\instalacion_cmasmenos\cmasmenos_projects\gesflota\main.cpp
+	"Menu.h"
+
+1667552600 source:c:\instalacion_cmasmenos\cmasmenos_projects\gesflota\menu.cpp
+	"Menu.h"
+
+1667489152 source:c:\instalacion_cmasmenos\cmasmenos_projects\gesflota\calendariomes.cpp
+	"CalendarioMes.h"
+
+1667559481 source:c:\instalacion_cmasmenos\cmasmenos_projects\gesflota\gestionbuque.cpp
+	"GestionBuque.h"
+
+1667558012 c:\instalacion_cmasmenos\cmasmenos_projects\gesflota\gestionbuque.h
+	<string.h>
+	"CalendarioMes.h"
+
+1667489287 c:\instalacion_cmasmenos\cmasmenos_projects\gesflota\calendariomes.h
+	<stdio.h>
+	<ctype.h>
+
+1667393112 c:\instalacion_cmasmenos\cmasmenos_projects\gesflota\menu.h
+	"GestionBuque.h"
+
+1668111929 source:d:\gesflota\gestionbuque.cpp
+	"GestionBuque.h"
+
+1668111613 d:\gesflota\gestionbuque.h
+	<string.h>
+	"CalendarioMes.h"
+
+1667489287 d:\gesflota\calendariomes.h
+	<stdio.h>
+	<ctype.h>
+
+1668111617 source:d:\gesflota\menu.cpp
+	"Menu.h"
+
+1668111620 d:\gesflota\menu.h
+	"GestionBuque.h"
+
+1668111625 source:d:\gesflota\main.cpp
+	"Menu.h"
+
+1668111601 source:d:\gesflota\calendariomes.cpp
+	"CalendarioMes.h"
+
+1670324449 source:g:\gesflota\gestionbuque.cpp
+	"GestionBuque.h"
+
+1670324691 g:\gesflota\gestionbuque.h
+	<string.h>
+	"CalendarioMes.h"
+
+1670324785 g:\gesflota\calendariomes.h
+	<stdio.h>
+	<ctype.h>
+
+1670323166 source:g:\gesflota\menu.cpp
+	"Menu.h"
+
+1670318439 g:\gesflota\menu.h
+	"GestionBuque.h"
+
+1670318437 source:g:\gesflota\main.cpp
+	"Menu.h"
+
+1670322571 source:g:\gesflota\calendariomes.cpp
+	"CalendarioMes.h"
+	"GestionBuque.h"
+
