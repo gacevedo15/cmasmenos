@@ -1,20 +1,12 @@
-/**************************************
-    * NOMBRE: #Gustavo#
-    * PRIMER APELLIDO: #Acevedo#
-    * SEGUNDO APELLIDO: #Alfonso#
-    * DNI: #52021927K#
-    * EMAIL: #gacevedoalfonso@gmail.com#
-    ***************************************/
-
 /*=============================================================================================================
     Programa: Calendario
 
-    Descripción: Programa que imprime la hoja del calendario del mes y año introducido entre los años 1601
+    DescripciÃ³n: Programa que imprime la hoja del calendario del mes y aÃ±o introducido entre los aÃ±os 1601
                  y 3000
 ==============================================================================================================*/
 
 /*=============================================================================================================
-                                              DIRECTIVA DE COMPILACIÓN
+                                              DIRECTIVA DE COMPILACIÃ“N
 ==============================================================================================================*/
 #include <stdio.h>
 
@@ -34,7 +26,7 @@ typedef struct TipoFecha{
 /*=============================================================================================================
                                                 SUBPROGRAMAS AUXILIARES
 ==============================================================================================================*/
-/* Lista de nombres para los meses del año */
+/* Lista de nombres para los meses del aÃ±o */
 const int maxNombre=15;
 typedef char TipoNombre[maxNombre];
 typedef TipoNombre listaNombreMes[13];
@@ -53,12 +45,12 @@ listaNombreMes nombreMes = {"?",
                             "NOVIEMBRE ",
                             "DICIEMBRE ",};
 
-/* Devolver si un año es bisiesto */
+/* Devolver si un aÃ±o es bisiesto */
 bool bisiesto(int anno){
   return((anno%4==0)&&(anno%100!=0))||(anno%400==0);
 }
 
-/* Sumar días de la semana cíclicamente */
+/* Sumar dÃ­as de la semana cÃ­clicamente */
 int SumarDias(int dia,int num){	                        /* dia de referencia y num por el que se incrementa la fecha */
   const int DiasSemana=7;
 	int aux;
@@ -66,11 +58,11 @@ int SumarDias(int dia,int num){	                        /* dia de referencia y n
   return aux;
 }
 
-/* Calcular el día de la semana que corresponde a una fecha */
+/* Calcular el dÃ­a de la semana que corresponde a una fecha */
 int DiaDeLaSemana(int mes,int anno){
-	   int IncDias;						                          /* Incremento en días de la semana */
-	   int IncAnnos; 						                        /* Incremento en días por años enteros */
-	   int IncBisiesto;						                      /* Incremento en días por años bisiestos */
+	   int IncDias;						                          /* Incremento en dÃ­as de la semana */
+	   int IncAnnos; 						                        /* Incremento en dÃ­as por aÃ±os enteros */
+	   int IncBisiesto;						                      /* Incremento en dÃ­as por aÃ±os bisiestos */
 	   const int AnnoReferencia=1601;
 	   const int MesReferencia=1;
 	   const int DiaReferencia=1;
@@ -107,19 +99,19 @@ int DiaDeLaSemana(int mes,int anno){
         break;
      }
 
-    /* Añadir 1 día por cada año bisiesto */
+    /* AÃ±adir 1 dÃ­a por cada aÃ±o bisiesto */
     for(int i=AnnoReferencia+1;i<anno;i++) {
       if(bisiesto(i)){
         IncBisiesto++;
       }
     }
 
-    /* añadir un día si la fecha cae en un ano bisiesto despues del día 29 de febrero */
+    /* aÃ±adir un dÃ­a si la fecha cae en un ano bisiesto despues del dÃ­a 29 de febrero */
     if((bisiesto(anno))&&(mes>2)){
       IncDias++;
     }
 
-    /* Sumamos el incremento total de días */
+    /* Sumamos el incremento total de dÃ­as */
     IncDias=IncDias+IncAnnos+IncBisiesto-1;
 
     return SumarDias (DiaReferencia, IncDias);
@@ -128,7 +120,7 @@ int DiaDeLaSemana(int mes,int anno){
 /*=============================================================================================================
                                                 FUNCIONES DEL TAD FECHA
 ==============================================================================================================*/
-/*Función para introducir la fecha*/
+/*FunciÃ³n para introducir la fecha*/
 void TipoFecha::IntroducirFecha(){
   printf("%cMes (1..12)? ",168);
   scanf("%d",&mes);
@@ -136,7 +128,7 @@ void TipoFecha::IntroducirFecha(){
   scanf("%d",&anno);
 }
 
-/*Función para comprobar si la fecha introducida es correcta*/
+/*FunciÃ³n para comprobar si la fecha introducida es correcta*/
 bool TipoFecha::FechaCorrecta(){
   if(mes>=1&&mes<=12){
     if(anno>=1601&&anno<=3000){
@@ -147,7 +139,7 @@ bool TipoFecha::FechaCorrecta(){
   }
 }
 
-/* Calcular el número de días que tiene el mes */
+/* Calcular el nÃºmero de dÃ­as que tiene el mes */
 int TipoFecha::DiasDelMes(){
   switch(mes){
     case 2:
@@ -168,10 +160,10 @@ int TipoFecha::DiasDelMes(){
   }
 }
 
-/*Función para imprimir la fecha*/
+/*FunciÃ³n para imprimir la fecha*/
 void TipoFecha::PrintarFecha(){
   int aux=0;                                        /* Variable auxiliar con el contador de posiciones del calendario */
-  int PrimerDia;                                    /* Variable para almacenar la posición del día 1 del mes */
+  int PrimerDia;                                    /* Variable para almacenar la posiciÃ³n del dÃ­a 1 del mes */
   PrimerDia = DiaDeLaSemana(mes,anno);
 
   printf("\n%s%17d\n",nombreMes[mes],anno);
@@ -191,7 +183,7 @@ void TipoFecha::PrintarFecha(){
 		aux++;
 	}
 
-  /* Imprimimos los días del mes*/
+  /* Imprimimos los dÃ­as del mes*/
 	for(int i=0;i<DiasDelMes();i++){
 	  if(aux!=0){
 	    /* Saltamos de semana (\n) en caso de que sea necesario */
@@ -238,3 +230,4 @@ int main(){
     fecha.PrintarFecha();
   }
 }
+
