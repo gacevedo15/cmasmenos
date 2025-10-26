@@ -1,11 +1,3 @@
-    /**************************************
-    * NOMBRE: #Gustavo#
-    * PRIMER APELLIDO: #Acevedo#
-    * SEGUNDO APELLIDO: #Alfonso#
-    * DNI: #52021927K#
-    * EMAIL: #gacevedoalfonso@gmail.com#
-    ***************************************/
-
 #include <stdio.h>
 
 int main(){
@@ -18,3 +10,4 @@ int main(){
 
     return 0;
 }
+
